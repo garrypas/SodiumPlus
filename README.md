@@ -7,8 +7,8 @@ Example of training using error backpropagation to solve an XOr problem
     var trainingPatterns = new List<TrainingPattern>
     {
         new TrainingPattern(new [] { 0d, 0d }, new [] { 0d, 1d }), // 0d, 1d == false
-        new TrainingPattern(new [] { 1d, 0d }, new [] { 1d, 0d }), // 0d, 1d == true
-        new TrainingPattern(new [] { 0d, 1d }, new [] { 1d, 0d }), // 0d, 1d == true
+        new TrainingPattern(new [] { 1d, 0d }, new [] { 1d, 0d }), // 1d, 0d == true
+        new TrainingPattern(new [] { 0d, 1d }, new [] { 1d, 0d }), // 1d, 0d == true
         new TrainingPattern(new [] { 1d, 1d }, new [] { 0d, 1d }), // 0d, 1d == false
     };
 
