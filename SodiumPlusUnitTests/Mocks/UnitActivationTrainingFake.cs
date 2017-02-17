@@ -8,6 +8,11 @@ namespace SodiumPlusUnitTests.Mocks
 {
     public class UnitActivationTrainingFake : IUnitActivationTrainingSingleFold
     {
+        public UnitActivationTrainingFake()
+        {
+
+        }
+
         public UnitActivationTrainingFake(UnitType unitType)
         {
             UnitType = unitType;

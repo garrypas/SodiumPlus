@@ -6,6 +6,7 @@ using SodiumPlusTraining.Topology;
 using SodiumPlusTraining.UnitActivations;
 using FluentAssertions;
 using NUnit.Framework;
+using SodiumPlusUnitTests.Mocks;
 
 namespace SodiumPlusUnitTests.Training.Perceptrons
 {
@@ -17,7 +18,10 @@ namespace SodiumPlusUnitTests.Training.Perceptrons
         [SetUp]
         public void SetUp()
         {
-            _inputUnits = new List<ITraversableUnitReadOnly<IUnitUnderTraining, IConnectionUnderTraining, IUnitActivationTraining>>();
+            _inputUnits = new List<ITraversableUnitReadOnly<IUnitUnderTraining, IConnectionUnderTraining, IUnitActivationTraining>>
+            {
+                TraversableUnit<IUnitUnderTraining, IConnectionUnderTraining, IUnitActivationTraining>.CreateUnit<UnitUnderTraining, UnitActivationTrainingFake>()
+            };
             _oneHotPerceptronUnderTraining = new OneHotPerceptronUnderTraining(_inputUnits);
         }
 

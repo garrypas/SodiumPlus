@@ -20,7 +20,7 @@ namespace SodiumPlus.Topology
         private readonly List<ITraversableConnection<TUnit, TConnection, TUnitActivation>> _incomingConnections;
         private readonly List<ITraversableConnection<TUnit, TConnection, TUnitActivation>> _outgoingConnections;
 
-        public TraversableUnit()
+        protected TraversableUnit()
         {
             _incomingConnections = new List<ITraversableConnection<TUnit, TConnection, TUnitActivation>>();
             _outgoingConnections = new List<ITraversableConnection<TUnit, TConnection, TUnitActivation>>();

@@ -21,6 +21,10 @@ namespace SodiumPlus.Perceptrons
 
         public Perceptron(IEnumerable<ITraversableUnitReadOnly<IUnit, IConnection, IUnitActivation<IUnit>>> inputUnits)
         {
+            if(inputUnits.Any() == false)
+            {
+                throw new ArgumentException("Input unit layer cannot be empty.");
+            }
             Network = new LayeredUnitCollection<IUnit, IConnection, IUnitActivation<IUnit>>(inputUnits).GetLayeredUnits();
         }
 

@@ -111,9 +111,9 @@ namespace SodiumPlusUnitTests.Training.Perceptrons
         public void PerceptronFinalizerCopiesNetworkReferenceToMultiFoldUnits()
         {
             var newNetwork = _perceptronFinalizer.Clean(_network);
-            var multiFoldUnits = newNetwork.SelectMany(u => u).Where(u => u.UnitActivation is IUnitActivationMultiFold<IUnit, IConnection, IUnitActivationCreatable<IUnit>>);
+            var multiFoldUnits = newNetwork.SelectMany(u => u).Where(u => u.UnitActivation is IUnitActivationMultiFold<IUnit, IConnection, IUnitActivation<IUnit>>);
             multiFoldUnits.Should().NotBeEmpty(because: "Empty lists will give false positives");
-            multiFoldUnits.Select(u => ((IUnitActivationMultiFold<IUnit, IConnection, IUnitActivationCreatable<IUnit>>) u.UnitActivation).Network).Should().NotContainNulls();
+            multiFoldUnits.Select(u => ((IUnitActivationMultiFold<IUnit, IConnection, IUnitActivation<IUnit>>) u.UnitActivation).Network).Should().NotContainNulls();
         }
 
         [Test]
