@@ -3,6 +3,7 @@ using SodiumPlus.Topology;
 using SodiumPlus.UnitActivations;
 using SodiumPlusTraining.Topology;
 using SodiumPlusTraining.UnitActivations;
+using Moq;
 
 namespace SodiumPlusUnitTests.Mocks
 {
@@ -10,7 +11,7 @@ namespace SodiumPlusUnitTests.Mocks
     {
         public UnitActivationTrainingFake()
         {
-
+            Properties = new Mock<IUnitUnderTraining>().SetupAllProperties().Object;
         }
 
         public UnitActivationTrainingFake(UnitType unitType)
@@ -56,7 +57,55 @@ namespace SodiumPlusUnitTests.Mocks
 
         public IUnitActivationCreatable<IUnit> Unwrap()
         {
-            throw new NotImplementedException();
+            return new UnitActivationFake();
+        }
+
+        /// God bless Moq; it doesn't work with overriden properties on interfaces........
+        private class UnitActivationFake : IUnitActivationCreatable<IUnit>
+        {
+            public UnitActivationFake()
+            {
+                Properties = new Unit();
+            }
+
+            public double ActivationValue
+            {
+                get { return Properties.ActivationValue; }
+            }
+
+            public string Name
+            {
+                get { return Properties.Name; }
+            }
+
+            public double NetInput
+            {
+                get { return Properties.NetInput; }
+            }
+
+            public IUnit Properties
+            {
+                get;
+                set;
+            }
+
+            public UnitType UnitType
+            {
+                get { return UnitType.NormalUnit; }
+            }
+
+            IUnit IUnitActivation<IUnit>.Properties
+            {
+                get { return Properties; }
+            }
+
+            public virtual void Activate()
+            {
+            }
+
+            public virtual void Stimulate(double netInput)
+            {
+            }
         }
 
         public double DerivativeValue { get; set; }
