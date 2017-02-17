@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EB62CA0-588B-426B-B4AC-133429FBCC52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SodiumPlusTraining</RootNamespace>
+    <AssemblyName>SodiumPlusTraining</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivationFunctions\HyperbolicTangentActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\ReluActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\ISoftmaxActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\SoftmaxActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\BipolarActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\IdentityActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\IActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\SigmoidActivationFunctionTraining.cs" />
+    <Compile Include="ActivationFunctions\ActivationFunctionTrainingBase.cs" />
+    <Compile Include="ErrorBackPropagation\BatchWeightChangeApplier.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\BuilderState.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\ErrorBackPropagationBuilder.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\ErrorBackPropagationChainOfResponsibility.cs">
+      <DependentUpon>IErrorBackPropagationChainOfResponsibility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\ErrorBackPropagationBuilderExtensions.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IErrorBackPropagationChainOfResponsibility.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IErrorBackPropagationDependencyFactory.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IErrorBackPropagationStepsDependencyFactory.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IInventoryAndChaining.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IInventoryCreator.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\ILastSteps.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\ILastStepsAndChaining.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\INetworkInputUnitCreator.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\INetworkInputUnitCreatorConnectionChaining.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\INetworkUnitCreator.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\INetworkUnitCreatorConnectionChaining.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\InventoryAndChaining.cs">
+      <DependentUpon>IInventoryAndChaining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\InventoryCreator.cs">
+      <DependentUpon>IInventoryCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\IOutputUnitActivationCreator.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IOutputUnitActivationCreatorAndChaining.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IUnitActivationCreator.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\IUnitActivationCreatorAndChaining.cs" />
+    <Compile Include="ErrorBackPropagation\Builder\LastSteps.cs">
+      <DependentUpon>ILastSteps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\LastStepsAndChaining.cs">
+      <DependentUpon>ILastStepsAndChaining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\NetworkInputUnitCreator.cs">
+      <DependentUpon>INetworkInputUnitCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\NetworkInputUnitCreatorConnectionChaining.cs">
+      <DependentUpon>INetworkInputUnitCreatorConnectionChaining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\NetworkUnitCreator.cs">
+      <DependentUpon>INetworkUnitCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\NetworkUnitCreatorConnectionChaining.cs">
+      <DependentUpon>INetworkUnitCreatorConnectionChaining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\OutputUnitActivationCreator.cs">
+      <DependentUpon>IOutputUnitActivationCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\OutputUnitActivationCreatorAndChaining.cs">
+      <DependentUpon>IOutputUnitActivationCreatorAndChaining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\UnitActivationCreator.cs">
+      <DependentUpon>IUnitActivationCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\Builder\UnitActivationCreatorAndChaining.cs">
+      <DependentUpon>IUnitActivationCreatorAndChaining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorBackPropagation\ErrorBackPropagationStepsBatch.cs" />
+    <Compile Include="ErrorBackPropagation\ErrorBackPropagationStepsOnline.cs" />
+    <Compile Include="ErrorBackPropagation\IHiddenUnitErrorCalculator.cs" />
+    <Compile Include="ErrorBackPropagation\IOutputUnitErrorCalculator.cs" />
+    <Compile Include="ErrorBackPropagation\IWeightChangeApplier.cs" />
+    <Compile Include="ErrorBackPropagation\NetworkErrorFunctions\DifferenceErrorFunction.cs" />
+    <Compile Include="ErrorBackPropagation\ErrorBackPropagationStepsBase.cs" />
+    <Compile Include="ErrorBackPropagation\ErrorBackPropagationTraining.cs" />
+    <Compile Include="ErrorBackPropagation\ErrorMatrix.cs" />
+    <Compile Include="ErrorBackPropagation\ErrorValueBackPropagator.cs" />
+    <Compile Include="ErrorBackPropagation\HiddenUnitErrorCalculator.cs" />
+    <Compile Include="ErrorBackPropagation\IErrorBackPropagationSteps.cs" />
+    <Compile Include="ErrorBackPropagation\IErrorBackPropagationTraining.cs" />
+    <Compile Include="ErrorBackPropagation\IErrorValueBackPropagator.cs" />
+    <Compile Include="ErrorBackPropagation\NetworkErrorFunctions\INetworkErrorFunction.cs" />
+    <Compile Include="ErrorBackPropagation\IWeightChangeBackPropagator.cs" />
+    <Compile Include="ErrorBackPropagation\IWeightChangeCalculator.cs" />
+    <Compile Include="ErrorBackPropagation\IWeightInitializer.cs" />
+    <Compile Include="ErrorBackPropagation\IWeightSetter.cs" />
+    <Compile Include="ErrorBackPropagation\NetworkErrorFunctions\CrossEntropyErrorFunction.cs" />
+    <Compile Include="ErrorBackPropagation\NetworkErrorFunctions\LMSErrorFunction.cs" />
+    <Compile Include="ErrorBackPropagation\ErrorValueApplier.cs" />
+    <Compile Include="ErrorBackPropagation\OnlineWeightChangeApplier.cs" />
+    <Compile Include="ErrorBackPropagation\OutputUnitErrorCalculator.cs" />
+    <Compile Include="ErrorBackPropagation\TrainingPattern.cs" />
+    <Compile Include="ErrorBackPropagation\WeightChangeBackPropagator.cs" />
+    <Compile Include="ErrorBackPropagation\WeightChangeCalculator.cs" />
+    <Compile Include="ErrorBackPropagation\WeightInitializer.cs" />
+    <Compile Include="ErrorBackPropagation\WeightMatrix.cs" />
+    <Compile Include="ErrorBackPropagation\WeightSetter.cs" />
+    <Compile Include="Perceptrons\OneHotPerceptronUnderTraining.cs" />
+    <Compile Include="Perceptrons\PerceptronFinalizer.cs" />
+    <Compile Include="Topology\Builder\StandardNetworkBuilderTraining.cs" />
+    <Compile Include="Topology\UnitUnderTraining.cs" />
+    <Compile Include="UnitActivations\HyperbolicTangentUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\ReluUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\InputUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\BiasUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\IUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\IUnitActivationTrainingMultiFold.cs" />
+    <Compile Include="UnitActivations\SoftmaxUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\IdentityUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\BipolarUnitActivationTraining.cs" />
+    <Compile Include="UnitActivations\IUnitActivationTrainingSingleFold.cs" />
+    <Compile Include="UnitActivations\SigmoidUnitActivationTraining.cs" />
+    <Compile Include="Perceptrons\IPerceptronUnderTraining.cs" />
+    <Compile Include="Perceptrons\PerceptronUnderTraining.cs" />
+    <Compile Include="Randomness\IRandomNumberGenerator.cs" />
+    <Compile Include="Randomness\RandomNumberGenerator.cs" />
+    <Compile Include="Topology\ConnectionUnderTraining.cs" />
+    <Compile Include="Topology\IConnectionUnderTraining.cs" />
+    <Compile Include="Topology\OptimumHiddenUnitsCalculator.cs" />
+    <Compile Include="Topology\IUnitUnderTraining.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SodiumPlus\SodiumPlus.csproj">
+      <Project>{623aa929-faf0-4aa6-bcac-dc68cfd1d667}</Project>
+      <Name>SodiumPlus</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodiumPlus", "SodiumPlus\SodiumPlus.csproj", "{623AA929-FAF0-4AA6-BCAC-DC68CFD1D667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodiumPlusUnitTests", "SodiumPlusUnitTests\SodiumPlusUnitTests.csproj", "{592CF6AB-F636-4833-A3B1-552E67DA718D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodiumPlusTraining", "SodiumPlusTraining\SodiumPlusTraining.csproj", "{8EB62CA0-588B-426B-B4AC-133429FBCC52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodiumPlusIntegrationTests", "SodiumPlusIntegrationTests\SodiumPlusIntegrationTests.csproj", "{73075188-D1CC-4B66-B6EB-E2CE00D4C1FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodiumPlusSerialization", "SodiumPlusSerialization\SodiumPlusSerialization.csproj", "{21ECF8BD-8540-47F2-A85C-24A2215E527C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ADF4F419-1B8C-44CB-9CE3-5A5A7FF18DB5}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{81DC0AE6-EC7A-4DB2-832D-5E591E14560A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingExample", "TrainingExample\TrainingExample.csproj", "{6B439F2D-D023-48C4-BF9A-2A267A52349E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{623AA929-FAF0-4AA6-BCAC-DC68CFD1D667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{623AA929-FAF0-4AA6-BCAC-DC68CFD1D667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{623AA929-FAF0-4AA6-BCAC-DC68CFD1D667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{623AA929-FAF0-4AA6-BCAC-DC68CFD1D667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{592CF6AB-F636-4833-A3B1-552E67DA718D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592CF6AB-F636-4833-A3B1-552E67DA718D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592CF6AB-F636-4833-A3B1-552E67DA718D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592CF6AB-F636-4833-A3B1-552E67DA718D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB62CA0-588B-426B-B4AC-133429FBCC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB62CA0-588B-426B-B4AC-133429FBCC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB62CA0-588B-426B-B4AC-133429FBCC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB62CA0-588B-426B-B4AC-133429FBCC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73075188-D1CC-4B66-B6EB-E2CE00D4C1FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73075188-D1CC-4B66-B6EB-E2CE00D4C1FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73075188-D1CC-4B66-B6EB-E2CE00D4C1FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73075188-D1CC-4B66-B6EB-E2CE00D4C1FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21ECF8BD-8540-47F2-A85C-24A2215E527C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21ECF8BD-8540-47F2-A85C-24A2215E527C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21ECF8BD-8540-47F2-A85C-24A2215E527C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21ECF8BD-8540-47F2-A85C-24A2215E527C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B439F2D-D023-48C4-BF9A-2A267A52349E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B439F2D-D023-48C4-BF9A-2A267A52349E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B439F2D-D023-48C4-BF9A-2A267A52349E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B439F2D-D023-48C4-BF9A-2A267A52349E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6B439F2D-D023-48C4-BF9A-2A267A52349E} = {81DC0AE6-EC7A-4DB2-832D-5E591E14560A}
+	EndGlobalSection
+EndGlobal
