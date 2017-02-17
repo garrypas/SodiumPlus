@@ -36,7 +36,7 @@ namespace SodiumPlusTraining.ErrorBackPropagation.Builder
         /// <summary>
         /// One-hot encoding chooses one of the output unit representations of a particular classification that the input is most likely to belong to based on previous training and makes it "hot" (1). All other units are "cold" (0).
         /// </summary>
-        IInventoryAndChaining OneHot();
+        IInventoryAndChaining UseOneHotEncoding();
 
         /// <summary>
         /// Use batched training. Weight updates are accumulated and applied in a batch at the end of each epoch.

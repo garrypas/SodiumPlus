@@ -69,7 +69,7 @@ namespace SodiumPlusIntegrationTests.Training.BackPropagation
 
             if (oneHot)
             {
-                chain = chain.And.OneHot();
+                chain = chain.And.UseOneHotEncoding();
             }
 
             var errorBackPropagationTraining = chain

@@ -1,4 +1,5 @@
-﻿using SodiumPlusTraining.UnitActivations;
+﻿using SodiumPlusTraining.ErrorBackPropagation.NetworkErrorFunctions;
+using SodiumPlusTraining.UnitActivations;
 
 namespace SodiumPlusTraining.ErrorBackPropagation.Builder
 {
@@ -98,6 +99,21 @@ namespace SodiumPlusTraining.ErrorBackPropagation.Builder
         public static IInventoryAndChaining SoftmaxActivation(this IOutputUnitActivationCreator unitActivationCreator)
         {
             return unitActivationCreator.OutputUnitActivationMultiFold<SoftmaxUnitActivationTraining>();
+        }
+
+        public static IInventoryAndChaining UseCrossEntropyErrorFunction(this IInventoryCreator unitActivationCreator)
+        {
+            return unitActivationCreator.NetworkErrorFunction<CrossEntropyErrorFunction>();
+        }
+
+        public static IInventoryAndChaining UseDifferenceErrorFunction(this IInventoryCreator unitActivationCreator)
+        {
+            return unitActivationCreator.NetworkErrorFunction<DifferenceErrorFunction>();
+        }
+
+        public static IInventoryAndChaining UseLmsErrorFunction(this IInventoryCreator unitActivationCreator)
+        {
+            return unitActivationCreator.NetworkErrorFunction<LmsErrorFunction>();
         }
     }
 }

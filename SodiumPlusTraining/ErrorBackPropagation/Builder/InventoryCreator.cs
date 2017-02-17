@@ -41,7 +41,7 @@ namespace SodiumPlusTraining.ErrorBackPropagation.Builder
             return _errorBackPropagationChainOfResponsibility.InventoryAndChaining();
         }
 
-        public IInventoryAndChaining OneHot()
+        public IInventoryAndChaining UseOneHotEncoding()
         {
             _errorBackPropagationChainOfResponsibility.State.OneHot = true;
             return _errorBackPropagationChainOfResponsibility.InventoryAndChaining();

@@ -94,7 +94,7 @@ namespace SodiumPlusUnitTests.Training.ErrorBackPropagation.Builder
 
             if (oneHot)
             {
-                chain = chain.And.OneHot();
+                chain = chain.And.UseOneHotEncoding();
             }
             var perceptron = await chain
                 .And.SetupNetwork(n => _network = n)
