@@ -1,4 +1,4 @@
-Sodium2<sup>+</sup> - A Powerful Neural Network Library for .NET
+Na<sup>+</sup> - A Powerful Neural Network Library for .NET
 ==
 Training
 =
