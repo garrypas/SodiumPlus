@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SodiumPlus</id>
+    <version>$version$</version>
+    <authors>Garry Passarella</authors>
+    <owners>Garry Passarella</owners>
+    <projectUrl>https://github.com/garrypas/sodiumplus</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A powerful neural network library for creating perceptron for classifying inputs. Also see SodiumPlusTraining for training neural networks using the error backpropagation approach.</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>Neural networks perceptron artificial intelligence ai backpropagation</tags>
+  </metadata>
+  <files>
+    <file src="bin\release\SodiumPlus.dll" target="build\net45\" />
+  </files>
+</package>

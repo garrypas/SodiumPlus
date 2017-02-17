@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("SodiumPlus")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Library for creating neural network and classifying inputs")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SodiumPlus")]

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SodiumPlusSerialization</id>
+    <version>$version$</version>
+    <authors>Garry Passarella</authors>
+    <owners>Garry Passarella</owners>
+    <projectUrl>https://github.com/garrypas/sodiumplus</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for serializing/deserializing neural networks created with SodiumPlus</description>
+    <releaseNotes>To be used with SodiumPlus</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Neural networks perceptron artificial intelligence ai backpropagation</tags>
+    <dependencies>
+      <dependency id="SodiumPlus" version="1.0" />
+      <dependency id="Newtonsoft.Json" version="9.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\release\SodiumPlusSerialization.dll" target="build\net45\" />
+  </files>
+</package>
