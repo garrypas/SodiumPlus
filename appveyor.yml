@@ -1,0 +1,21 @@
+version: 1.0.{build}
+branches:
+  only:
+  - release
+configuration: Release
+build:
+  verbosity: minimal
+after_build:
+- ps: .\pack-nuget.ps1 -version $env:appveyor_build_version
+artifacts:
+- path: '**/SodiumPlus.nupkg'
+  name: SodiumPlusNuget
+- path: '**/SodiumPlusTraining.nupkg'
+  name: SodiumPlusTrainingNuget
+- path: '**/SodiumPlusSerialization.nupkg'
+  name: SodiumPlusSerializationNuget
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 21INObpCbRn0NPnssWsHAy8gO3nlcuRlZIfcE2ONDN8kVll9NO/F73z6W8Txzjqj
+  artifact: SodiumPlusNuget,SodiumPlusTrainingNuget,SodiumPlusSerializationNuget
