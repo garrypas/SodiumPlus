@@ -81,6 +81,7 @@
     <Compile Include="Topology\Builder\StandardNetworkBuilderExtensionsTests.cs" />
     <Compile Include="Topology\Builder\StandardNetworkBuilderTests.cs" />
     <Compile Include="Topology\LayeredConnectionCollectionTests.cs" />
+    <Compile Include="Topology\NetworkExtensionsTests.cs" />
     <Compile Include="Topology\TraversableUnitTests.cs" />
     <Compile Include="Training\ActivationFunctions\HyperbolicTangentActivationFunctionTrainingTests.cs" />
     <Compile Include="Training\ActivationFunctions\ReluActivationFunctionTrainingTests.cs" />

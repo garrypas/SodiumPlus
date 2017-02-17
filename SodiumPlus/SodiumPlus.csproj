@@ -121,6 +121,7 @@
     <Compile Include="Topology\Namers\INamer.cs" />
     <Compile Include="Topology\Namers\Namer.cs" />
     <Compile Include="Topology\Namers\UnitNamer.cs" />
+    <Compile Include="Topology\NetworkExtensions.cs" />
     <Compile Include="Topology\TraversableConnection.cs" />
     <Compile Include="Topology\TraversableUnit.cs" />
     <Compile Include="UnitActivations\HyperbolicTangentUnitActivation.cs" />
