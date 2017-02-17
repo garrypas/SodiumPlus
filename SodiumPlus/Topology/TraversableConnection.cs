@@ -17,14 +17,9 @@ namespace SodiumPlus.Topology
         public static ITraversableConnection<TUnit, TConnection, TUnitActivation> CreateConnection<TConnectionImpl>(ITraversableUnit<TUnit, TConnection, TUnitActivation> unitBelow, ITraversableUnit<TUnit, TConnection, TUnitActivation> unitAbove)
             where TConnectionImpl: TConnection, new()
         {
-            return CreateConnection(unitBelow, unitAbove, () => new TConnectionImpl());
-        }
-
-        public static ITraversableConnection<TUnit, TConnection, TUnitActivation> CreateConnection(ITraversableUnit<TUnit, TConnection, TUnitActivation> unitBelow, ITraversableUnit<TUnit, TConnection, TUnitActivation> unitAbove, Func<TConnection> connectionCreator)
-        {
             var connection = new TraversableConnection<TUnit, TConnection, TUnitActivation>
             {
-                Properties = connectionCreator(),
+                Properties = new TConnectionImpl(),
                 InputUnit = unitBelow,
                 OutputUnit = unitAbove
             };
