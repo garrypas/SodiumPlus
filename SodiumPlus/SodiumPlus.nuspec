@@ -12,6 +12,6 @@
     <tags>Neural networks perceptron artificial intelligence ai backpropagation</tags>
   </metadata>
   <files>
-    <file src="bin\release\SodiumPlus.dll" target="build\net45\" />
+    <file src="bin\release\SodiumPlus.dll" target="lib\net45\" />
   </files>
 </package>

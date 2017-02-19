@@ -17,6 +17,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\release\SodiumPlusSerialization.dll" target="build\net45\" />
+    <file src="bin\release\SodiumPlusSerialization.dll" target="lib\net45\" />
   </files>
 </package>
