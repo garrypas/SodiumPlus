@@ -2,6 +2,8 @@ Na<sup>+</sup> - A Powerful Neural Network Library for .NET
 ==
 Training
 =
+If you are installing with Nuget it is necessary to install both [SodiumPlus](https://www.nuget.org/packages/SodiumPlus) *and* [SodiumPlusTraining](https://www.nuget.org/packages/SodiumPlusTraining) to run training.
+
 Example of training using error backpropagation to solve an XOr problem
 
     var trainingPatterns = new List<TrainingPattern>
