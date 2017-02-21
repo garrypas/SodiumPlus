@@ -12,7 +12,7 @@
     <copyright>Copyright 2017</copyright>
     <tags>Neural networks perceptron artificial intelligence ai backpropagation</tags>
     <dependencies>
-      <dependency id="SodiumPlus" version="1.0" />
+      <dependency id="SodiumPlus" version="$version$" />
       <dependency id="Newtonsoft.Json" version="9.0" />
     </dependencies>
   </metadata>
